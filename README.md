@@ -107,6 +107,88 @@ Alert: The current temperature(45) has exceeded the configured set point (38)
 
 RTC functions are implemented in RTC.c.
 
+🔌 LPC2148 Pin Configuration
+
+📍 PORT 0 Assignments
+
+Pin	Function	Description
+
+P0.0	UART0 TX	Transmit data to GSM module (RX of GSM)
+
+P0.1	UART0 RX	Receive data from GSM module (TX of GSM)
+
+P0.2	I2C SCL	Serial Clock line for EEPROM
+
+P0.3	I2C SDA	Serial Data line for EEPROM
+
+P0.5	LCD RS	Register Select for LCD
+
+P0.6	LCD EN	Enable signal for LCD
+
+P0.16	EINT0	External interrupt switch
+
+P0.20	LED	Blink control indicator
+
+P0.21	LED	EEPROM error indication
+
+P0.22	LED	GSM error indication
+
+P0.25	Buzzer	Alert buzzer output
+
+P0.28	ADC	Temperature sensor (LM35) input
+
+📍 PORT 1 Assignments
+
+Pin	Function	Description
+
+P1.16	LCD D0	LCD data bit 0
+
+P1.17	LCD D1	LCD data bit 1
+
+P1.18	LCD D2	LCD data bit 2
+
+P1.19	LCD D3	LCD data bit 3
+
+P1.20	LCD D4	LCD data bit 4
+
+P1.21	LCD D5	LCD data bit 5
+
+P1.22	LCD D6	LCD data bit 6
+
+P1.23	LCD D7	LCD data bit 7
+
+P1.24	Keypad	Keypad row/column
+
+P1.25	Keypad	Keypad row/column
+
+P1.26	Keypad	Keypad row/column
+
+P1.27	Keypad	Keypad row/column
+
+P1.28	Keypad	Keypad row/column
+
+P1.29	Keypad	Keypad row/column
+
+P1.30	Keypad	Keypad row/column
+
+P1.31	Keypad	Keypad row/column
+
+📝 Notes
+
+UART0 is dedicated to GSM communication
+
+I2C interface is used for EEPROM storage
+
+LCD operates in 8-bit mode
+
+ADC input reads temperature from LM35
+
+RTC works internally using LPC2148 RTC registers
+
+LEDs provide system & error status
+
+Buzzer activates during temperature alert
+
 📩 SMS Message Structure (IMPORTANT)
 
 All SMS commands must follow this secure format:
@@ -238,3 +320,5 @@ Embedded Systems | ARM7 | GSM | RTC
 📜 License
 
 This project is intended for academic and educational use only.
+
+
