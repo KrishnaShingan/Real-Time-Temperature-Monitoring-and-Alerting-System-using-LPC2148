@@ -315,7 +315,6 @@ Academic ARM7 projects
 👨‍💻 Author
 
 Krishna Shingan
-Embedded Systems | ARM7 | GSM | RTC
 
 📜 License
 
